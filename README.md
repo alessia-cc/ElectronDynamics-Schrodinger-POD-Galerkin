@@ -7,7 +7,7 @@ Electron dynamics and POD-Galerkin reduced-order modeling on a circular bi-cryst
 The study models electron wave-function evolution $\Psi(x, t)$ on a circular domain of radius $1/\pi$ centered at $(0, 0)$ with homogeneous Dirichlet boundary conditions and initial Gaussian wave packet $\Psi(x, 0) = e^{-100\|x\|^2}$, governed by the Schrödinger equation with parameter-dependent potential $V_{\mu}(x) = E^{\top}x + \Delta V_0 \mathbf{1}_{[0, +\infty)}(x_2)$ for $\boldsymbol{\mu} = [E, \Delta V_0]$ with $E, \Delta V_0 \in [0, 1000]$.
 
 The notebook covers:
-- **FOM Code & Mesh Setup**: Building a `CG` 1st-order finite element mesh (`stepsize = 0.02`, `995` DoFs) and assembling mass, stiffness, and potential matrices in `FOMsolver(E, deltaV0, steps = 99, dt = 1e-3)` over real and imaginary state components, plus auxiliary functions (`probabilities`, `caught`) for electron probability and capture evaluation.
+- **FOM Code & Mesh Setup**: Building a 1st-order finite element mesh and assembling mass, stiffness, and potential matrices in `FOMsolve` over real and imaginary state components, plus auxiliary functions for electron probability and capture evaluation.
 - **SVD & POD Basis Setup**: Loading precomputed FOM snapshot data from `ACassignment1.npz` via Google Drive (`gdown`) or generating new parameter samples and FOM trajectories.
 
 ## Repository & Notebook Structure
