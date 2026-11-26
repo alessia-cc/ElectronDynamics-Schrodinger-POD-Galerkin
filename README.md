@@ -8,7 +8,7 @@ The study models electron wave-function evolution $\Psi(x, t)$ on a circular dom
 
 The notebook covers:
 - **FOM Code & Mesh Setup**: Building a `CG` 1st-order finite element mesh (`stepsize = 0.02`, `995` DoFs) and assembling mass, stiffness, and potential matrices in `FOMsolver(E, deltaV0, steps = 99, dt = 1e-3)` over real and imaginary state components, plus auxiliary functions (`probabilities`, `caught`) for electron probability and capture evaluation.
-- **SVD & POD Basis Setup**: Loading precomputed FOM snapshot data from `ACassignment1.npz` (`mu`, `u`, and optional energy/probability arrays) via Google Drive (`gdown`) or generating new parameter samples and FOM trajectories.
+- **SVD & POD Basis Setup**: Loading precomputed FOM snapshot data from `ACassignment1.npz` via Google Drive (`gdown`) or generating new parameter samples and FOM trajectories.
 
 ## Repository & Notebook Structure
 
